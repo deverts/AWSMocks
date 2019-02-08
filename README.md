@@ -7,8 +7,9 @@ These services usually take up a tiny footprint, so instead of running them in i
 ## To build
 `docker build .`
 
-## To run
-`docker run -p 4567:4567 -p 4568:4568 -p 6379:6379 --rm -i -t awsmocks:0.01`
+## To run a temporary instance
+`docker run -p 4567:4567 -p 4568:4568 -p 6379:6379 --rm -i -t deverts/awsmocks:X.XX`
+
 
 ## Configuration
 Env variables:
