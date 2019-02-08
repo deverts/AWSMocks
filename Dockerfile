@@ -10,5 +10,8 @@ ENV KINESIS_PORT=4567 DYNAMODB_PORT=4568 REDIS_PORT=6379
 EXPOSE 4567 4568 6379
 
 COPY services.conf /etc/supervisor/conf.d/services.conf
+COPY start.sh /root/start.sh
 
-CMD supervisord -n
+RUN chmod +x /root/start.sh
+
+CMD /root/start.sh
